@@ -341,7 +341,7 @@ var Talk = new graphql.GraphQLObjectType({
             description: {
                 type: graphql.GraphQLString
             },
-            slides_url {
+            slides_url: {
                 type: graphql.GraphQLString
             }
         }
