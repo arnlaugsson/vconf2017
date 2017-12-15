@@ -3,6 +3,9 @@ On December 22nd 2017 - Virtual Con will be held. We received a lot of interesti
 
 This project makes the data available for usage via a GraphQL portal.
 
+To install: `npm install`
+To run: `npm start`
+
 To see info on the available fields for the suggested talks:
 
 ```
