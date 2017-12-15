@@ -1,0 +1,11 @@
+{
+  "name": "talks-graphql-server",
+  "version": "1.0.0",
+  "description": "GraphQL server for Suggested Talks for Virtual Con",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-graphql": "^0.3.0",
+    "graphql": "^0.4.12"
+  }
+}
