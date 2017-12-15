@@ -327,6 +327,12 @@ var Talk = new graphql.GraphQLObjectType({
     name: 'talk',
     fields: function() {
         return {
+            id: {
+                type: graphql.GraphQLID
+            },
+            date_added: {
+                type: graphql.GraphQLString
+            },
             title: {
                 type: graphql.GraphQLString
             },
