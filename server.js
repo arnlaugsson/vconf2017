@@ -3,6 +3,8 @@ var express = require('express')
 var graphQLHTTP = require('express-graphql')  
 var Schema = require('./schema')  
 
+var port = process.env.PORT || 8080;
+
 var query = 'query { talks { title, speaker } }'
 graphql(Schema, query).then( function(result) {
   console.log(JSON.stringify(result,null," "));
@@ -10,6 +12,6 @@ graphql(Schema, query).then( function(result) {
 
 var app = express()
   .use('/', graphQLHTTP({ schema: Schema, pretty: true }))
-  .listen(8080, function (err) {
+  .listen(port, function (err) {
     console.log('GraphQL Server is now running on localhost:8080');
   });
