@@ -2,6 +2,7 @@ var graphql = require ('graphql');
 
 var Talks = [
   {
+    "id": 1,
     "date_added": "15/11/2017 12:40:15",
     "title": "Treating documentation like code: a practical account",
     "speaker": "Jodie Putrino",
@@ -17,6 +18,7 @@ var Talks = [
     "slides_url": "https://www.slideshare.net/DenisRadin/jshtml-in-aircraft-and-shipbuilding-industries-or-airspace-is-closer-than-you-may-think"
   },
   {
+    "id": 2,
     "date_added": "15/11/2017 14:42:41",
     "title": "Web Accessibility is not an option",
     "speaker": "Xavier Dutreilh",
@@ -32,6 +34,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 3,
     "date_added": "15/11/2017 14:46:27",
     "title": "YES, your site too can (and should) be accessible",
     "speaker": "Laura Carvajal",
@@ -47,6 +50,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 4,
     "date_added": "15/11/2017 14:48:55",
     "title": "Applying NASA coding standards to JavaScript",
     "speaker": "Denis Radin",
@@ -62,6 +66,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 5,
     "date_added": "15/11/2017 15:00:57",
     "title": "Evaluating Technology",
     "speaker": "Jeremy Keith",
@@ -77,6 +82,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 6,
     "date_added": "20/11/2017 10:42:36",
     "title": "Rethinking Microservices with Stateful Streams",
     "speaker": "Ben Stopford",
@@ -92,6 +98,7 @@ var Talks = [
     "slides_url": "https://gotoams.nl/2017/sessions/148"
   },
   {
+    "id": 7,
     "date_added": "22/11/2017 14:33:11",
     "title": "On left-pad and empathy: understanding human connection",
     "speaker": "Myles Borins",
@@ -107,6 +114,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 8,
     "date_added": "22/11/2017 14:36:09",
     "title": "A Cartoon Intro to WebAssembly",
     "speaker": "Lin Clark",
@@ -122,6 +130,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 9,
     "date_added": "22/11/2017 14:37:05",
     "title": "JavaScript engines - how do they even?",
     "speaker": "Franziska Hinkelmann",
@@ -137,6 +146,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 10,
     "date_added": "22/11/2017 14:38:58",
     "title": "Let's go big (Big numbers in JavaScript)",
     "speaker": "Alexander Reardon",
@@ -152,6 +162,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 11,
     "date_added": "22/11/2017 14:41:00",
     "title": "What's new in Netscape Navigator 2.0",
     "speaker": "Marcin Szczepanski",
@@ -167,6 +178,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 12,
     "date_added": "22/11/2017 14:42:04",
     "title": "The Legacy of the JavaScript Community",
     "speaker": "Whitney Williams",
@@ -182,6 +194,7 @@ var Talks = [
     "slides_url": "https://www.slideshare.net/Codemotion/the-legacy-of-the-javascript-community-whitney-williams-codemotion-amsterdam-2017"
   },
   {
+    "id": 13,
     "date_added": "22/11/2017 14:43:12",
     "title": "CSS and the hierarchy problem: What makes a CSS developer?",
     "speaker": "Ivana McConnell",
@@ -197,6 +210,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 14,
     "date_added": "22/11/2017 14:44:08",
     "title": "Where does CSS come from?",
     "speaker": "Rachel Andrew",
@@ -212,6 +226,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 15,
     "date_added": "22/11/2017 14:44:46",
     "title": "Getting Reactive with CSS",
     "speaker": "David Khourshid",
@@ -227,6 +242,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 16,
     "date_added": "22/11/2017 14:45:32",
     "title": "The road to styled components: CSS in component-based systems",
     "speaker": "Glen Maddern",
@@ -242,6 +258,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 17,
     "date_added": "22/11/2017 14:46:21",
     "title": "Let's Build a CSS Game",
     "speaker": "Una Kravets",
@@ -257,6 +274,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 18,
     "date_added": "22/11/2017 14:51:17",
     "title": "The myth of the \"Real JavaScript Developer",
     "speaker": "Brenna O'Brien",
@@ -272,6 +290,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 19,
     "date_added": "23/11/2017 10:05:04",
     "title": "Learning Functional Programming with JavaScript",
     "speaker": "Anjana Vakil",
@@ -287,6 +306,7 @@ var Talks = [
     "slides_url": ""
   },
   {
+    "id": 20,
     "date_added": "07/12/2017 13:32:01",
     "title": "Adopting Continuous Delivery",
     "speaker": "Jez Humble",
@@ -307,6 +327,12 @@ var Talk = new graphql.GraphQLObjectType({
     name: 'talk',
     fields: function() {
         return {
+            id: {
+                type: graphql.GraphQLID
+            },
+            date_added: {
+                type: graphql.GraphQLString
+            },
             title: {
                 type: graphql.GraphQLString
             },
